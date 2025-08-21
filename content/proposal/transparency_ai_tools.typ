@@ -1,8 +1,14 @@
-#import "/utils/todo.typ": TODO
+// Transparency statement for the use of AI tools.
 
-#TODO[
-  Change this paragraph to reflect the tools you used in your proposal
-]
+In preparing this thesis proposal, I utilized an AI assistant, specifically a large language model, to support several key aspects of the writing and research process. The use of this tool was integrated across all sections of the document to improve efficiency and the quality of the final output.
+
+My primary use of the AI was for *Content Generation and Idea Expansion*. I provided the core technical concepts, project goals, and specific constraints, which the AI then helped me articulate and expand into structured paragraphs for the Abstract, Introduction, Problem, Motivation, and Objective sections. This iterative process allowed me to refine my ideas and ensure they were communicated clearly. The AI was also used to help structure the project *Schedule*.
+
+For the *Bibliography*, the AI assisted with research by identifying relevant scientific publications from sources like Google Scholar and formatting the citations appropriately for the Typst bibliography file. Additionally, the assistant provided *Coding Assistance* by generating the Mermaid code for the UML deployment diagram (Figure 1) and the conceptual memory model (Figure 2) based on my descriptions of the architectures. Finally, the tool was used for general *Grammar and Style Correction* to improve the overall readability and professionalism of the text.
+
+I have carefully checked all texts and code created with these tools to ensure that they are correct, make sense, and accurately represent the intended scope and plan for my thesis.
+
+
 /*
 Categories of AI Usage:
   Grammar and Style Correction

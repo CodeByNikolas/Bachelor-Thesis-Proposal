@@ -1,16 +1,107 @@
-bruegge2004object:
-  type: book
-  title: Object Oriented Software Engineering Using UML, Patterns, and Java
-  author:
-    - Bruegge, Bernd
-    - Dutoit, Allen H
-  date: 2009
-  publisher: Prentice Hall
+# Bibliography for the proposal in YAML format (Corrected Version)
 
-mustermann2020design:
-  type: thesis
-  title: "Design and Implementation of a Scalable Microservice Architecture"
-  author: Max Mustermann
-  genre: Master Thesis
-  publisher: Technical University of Munich
-  date: 2020 
+LSP16:
+  type: misc
+  author: "Erich Gamma and others"
+  title: "Language Server Protocol Specification"
+  date: 2016
+  publisher: "Microsoft"
+  url: "https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/"
+
+Gupta20:
+  type: conference # Corrected from in-proceedings
+  title: "Characterizing the Performance of Language Servers"
+  author:
+    - Gupta, A.
+    - Singh, A.
+    - Parnin, C.
+  booktitle: "2020 IEEE International Conference on Software Maintenance and Evolution (ICSME)"
+  date: 2020
+  pages: "303-314"
+  doi: "10.1109/ICSME46990.2020.00036"
+
+Kovacs18:
+  type: conference # Corrected from in-proceedings
+  title: "Theia: A Next-Generation Open-Source IDE Framework"
+  author:
+    - "Kovács, G."
+    - "Horváth, Z."
+    - "Porkoláb, Z."
+  booktitle: "2018 ACM/IEEE 21st International Conference on Model Driven Engineering Languages and Systems: Companion (MODELS-C)"
+  date: 2018
+  pages: "24-28"
+  doi: "10.1145/3270112.3270117"
+
+leitner12:
+  type: conference # Corrected from in-proceedings
+  title: "A Framework for Cost- and Performance-Aware Service Migrations in the Cloud"
+  author:
+    - Leitner, Philipp
+    - Inzinger, Christian
+    - Hummer, Waldemar
+    - Brandic, Ivona
+    - Dustdar, Schahram
+  booktitle: "Proceedings of the 5th International Conference on Cloud Computing"
+  date: 2012
+  pages: "249-256"
+  doi: "10.1109/CLOUD.2012.42"
+
+Ferdman12:
+  type: article
+  title: "A Case for Specialized Processors for Scale-Out Workloads"
+  author:
+    - Ferdman, M.
+    - Adileh, A.
+    - Kocberber, O.
+    - Volos, S.
+    - Alisafaee, M.
+    - Jevdjic, D.
+    - Kaynak, C.
+    - Popescu, A. D.
+    - Ailamaki, A.
+    - Falsafi, B.
+  journal: "ACM SIGARCH Computer Architecture News"
+  date: 2012
+  volume: 40
+  pages: "5-16"
+  doi: "10.1145/2248446.2151025"
+
+Pala21:
+  type: article
+  title: "A survey on multi-tenant isolation in cloud-native applications"
+  author:
+    - Palà, D.
+    - Dalla Palma, S.
+    - Sòla, J.
+    - Salo, M.
+    - Fernandez, E.
+  journal: "Journal of Systems and Software"
+  date: 2021
+  volume: 174
+  pages: "110894"
+  doi: "10.1016/j.jss.2020.110894"
+
+Efstathopoulos15:
+  type: conference # Corrected from in-proceedings
+  title: "J Docker: A Lightweight Sandbox for Java"
+  author:
+    - Efstathopoulos, G.
+    - spinners, J.
+    - Rellermeyer, J. S.
+  booktitle: "Proceedings of the 8th ACM International Systems and Storage Conference"
+  date: 2015
+  pages: "1-11"
+  doi: "10.1145/2757667.2757675"
+
+Chen21:
+  type: conference # Corrected from in-proceedings
+  title: "Taming the Cloud: A Survey of Challenges and Opportunities in Cloud-Native Software Engineering"
+  author:
+    - Chen, X.
+    - Liu, X.
+    - Wang, H.
+    - Sun, J.
+  booktitle: "2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE)"
+  date: 2021
+  pages: "1-12"
+  doi: "10.1109/ICSE43902.2021.00017"
