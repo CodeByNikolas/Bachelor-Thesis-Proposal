@@ -15,7 +15,7 @@ Second, building upon this baseline, a working prototype of the *shared JVM mode
 
 ==  Ensure Strict User Isolation and System Modularity
 
-Security and stability are non-negotiable requirements of this project. A primary objective is to guarantee that the shared architecture provides strict logical isolation between user sessions @Gornish17. Under no circumstances should one user's actions, data, or a potential crash impact any other user. This requires meticulous state management to ensure that all mutable, user-specific data (e.g., file contents, diagnostics) is sandboxed to its respective session @Efstathopoulos15.
+Security and stability are non-negotiable requirements of this project. A primary objective is to guarantee that the shared architecture provides strict logical isolation between user sessions @Bargmann19. Under no circumstances should one user's actions, data, or a potential crash impact any other user. This requires meticulous state management to ensure that all mutable, user-specific data (e.g., file contents, diagnostics) is sandboxed to its respective session @Sun12.
 
 Furthermore, the entire system will be designed with modularity in mind, relying heavily on well-defined interfaces. This architectural principle ensures that specific components, such as the session management strategy or the underlying communication protocol, can be replaced or upgraded in the future without requiring a full system redesign. This focus on modularity is crucial for the long-term maintainability and evolution of the platform.
 
