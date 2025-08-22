@@ -1,47 +1,15 @@
-#import "@preview/fletcher:0.5.8" as fletcher: diagram, node, edge
-
 = Problem
 
-The primary problem with the current deployment architecture is its profound lack of resource efficiency at scale. By pairing each user's Theia instance with its own dedicated Java Language Server, the system creates a rigid, linear relationship between the number of concurrent users and total resource consumption. This architecture is plagued by two major inefficiencies: redundant process overhead and duplicated in-memory state, which together create a significant scalability bottleneck.
+The central problem with the current deployment architecture is its lack of resource efficiency and scalability. In the current setup, each user's Theia instance runs an *internal* Java Language Server within the same container. While simple to deploy, this tightly-coupled model creates a rigid, linear relationship between the number of concurrent users and the total resources consumed, leading to two significant inefficiencies.
 
-First, the Java Virtual Machine itself carries a substantial memory footprint before any application code is loaded. For a platform serving thousands of concurrent users, this results in thousands of JVMs running in parallel, consuming a vast amount of memory for what is largely redundant process management. Second, language servers build and maintain large data structures like Abstract Syntax Trees and symbol indexes in memory @Gupta20. Since many students work on identical starter projects, each language server independently computes and stores nearly identical project states, leading to massive data redundancy.
+First, this architecture prevents any form of resource sharing. The Java Virtual Machine (JVM) itself carries a substantial memory footprint. For a platform serving thousands of users, this results in thousands of JVMs running in parallel, consuming large amounts of memory. 
+Second, since many students work on identical starter projects, each internal language server independently computes and stores nearly identical data structures like Abstract Syntax Trees (ASTs) and symbol indexes, leading to considerable data redundancy across the cluster @Gupta20.
 
-These inefficiencies have direct negative consequences for the platform's stakeholders. For the *university acting as the platform operator*, high resource consumption translates directly into increased infrastructure costs, limiting the number of students that can be supported simultaneously. For the *students*, high cluster load can lead to degraded performance, such as longer IDE startup times and noticeable latency in editor features, which negatively impacts their learning experience. Figure 1 illustrates the architectural shift proposed to solve this problem.
+These inefficiencies have direct negative consequences. For the *university acting as the platform operator*, high resource consumption translates into increased infrastructure costs. For the *students*, high cluster load can lead to degraded performance, such as longer IDE startup times and noticeable latency. This thesis proposes transitioning from this suboptimal model to a shared, centralized architecture, as illustrated in Figure 1.
 
 #figure(
-  grid(columns: (1fr, 1fr), gutter: 2em)[
-    // Column 1: Current Architecture
-    block[
-      strong[Current Architecture (one LS per pod)]
-      #diagram(
-        spacing: 2.5em,
-        node((0,0), [Theia IDE 1]),
-        node((1,0), [JDT LS 1]),
-        edge((0,0), (1,0), "-|>"),
-        node((0,1), [Theia IDE 2]),
-        node((1,1), [JDT LS 2]),
-        edge((0,1), (1,1), "-|>"),
-        node((0,2), [Theia IDE N]),
-        node((1,2), [JDT LS N]),
-        edge((0,2), (1,2), "-|>")
-      )
-    ]
-    // Column 2: Proposed Shared Architecture
-    block[
-      strong[Proposed Shared Architecture]
-      #diagram(
-        spacing: 2.5em,
-        node((0,0), [Theia IDE 1]),
-        node((0,1), [Theia IDE 2]),
-        node((0,2), [Theia IDE N]),
-        node((2,1), [Shared JDT LS Service], width: 10em),
-        edge((0,0), (2,1), "-|>"),
-        edge((0,1), (2,1), "-|>"),
-        edge((0,2), (2,1), "-|>")
-      )
-    ]
-  ],
+  image("images/deployment-diagram.png", width: 80%),
   caption: [
-    Deployment diagram comparing the current architecture, where each user pod contains an independent language server, with the proposed architecture, which centralizes the language server into a shared service.
+    Deployment diagram illustrating the transition from the Current Architecture, where each container runs an internal and tightly-coupled language server, to the Proposed Shared Architecture, which decouples the IDE and centralizes the language server into a scalable, shared service.
   ],
 ) <fig:deployment-diagram>

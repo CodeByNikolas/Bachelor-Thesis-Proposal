@@ -1,17 +1,15 @@
 = Schedule
 
-The thesis work is planned over a 5-month period, starting on February 3, 2025, and concluding on June 3, 2025. The project will be structured into three main milestones, following an agile, iterative approach to ensure consistent progress and measurable deliverables.
+The thesis work is planned over 5 months, starting on 15 September 2025, and concluding on 15 February 2026. The project will be structured into three main milestones, following an agile, iterative approach.
 
 - *Milestone 1: Foundation and Service Externalization (Weeks 1-6)*
-  - `Weeks 1-2:` In-depth research on LSP, JDT Language Server internals, and multi-tenant architectures. Set up development and testing environments.
-  - `Weeks 3-4:` Implement the initial externalization of the JDT Language Server into a standalone, containerized Java service. Establish basic communication between a single Theia instance and the external service. (Objective 1)
-  - `Weeks 5-6:` Develop the initial session management logic to handle multiple, independent connections, laying the groundwork for the shared JVM model.
+  - `Weeks 1-2:` In-depth research on LSP, JDT Language Server internals, and multi-tenant architectures. Set up development environments.
+  - `Weeks 3-6:` Implement the externalization of the JDT Language Server into a standalone service. Establish a 1-to-1 connection between a Theia instance and the external service to create a performance baseline. (Objective 1, part 1)
 
-- *Milestone 2: Shared JVM Implementation and Evaluation (Weeks 7-14)*
-  - `Weeks 7-10:` Implement the core logic for the shared JVM architecture, ensuring strict user session isolation within the service. Refine the LSP message proxying and state management. (Objective 1 & 2)
-  - `Weeks 11-12:` Integrate the shared language server with the existing benchmarking suite. Develop test scenarios simulating realistic concurrent user workloads. (Objective 3)
-  - `Weeks 13-14:` Execute comprehensive performance and resource benchmarks. Analyze the data to compare the new architecture against the baseline and validate KPIs.
+- *Milestone 2: Shared JVM Implementation and Evaluation (Weeks 7-15)*
+  - `Weeks 7-12:` Implement the core logic for the shared JVM architecture, including the proxy/dispatcher and session management. Ensure strict user isolation within the service. (Objective 1 part 2 & Objective 2)
+  - `Weeks 13-15:` Integrate the shared language server with the benchmarking suite. Execute comprehensive performance and resource benchmarks against the baseline to validate KPIs. (Objective 3)
 
-- *Milestone 3: Multi-Tenancy Analysis and Finalization (Weeks 15-20)*
-  - `Weeks 15-17:` Conduct the feasibility study for the true multi-tenant language server. Research state-sharing strategies and concurrency models. Document the architectural challenges and potential designs. (Objective 4)
-  - `Weeks 18-20:` Finalize the implementation, refine documentation, and incorporate feedback. This period also serves as a buffer for addressing any unforeseen issues and preparing the final thesis document.
+- *Milestone 3: Multi-Tenancy Analysis and Finalization (Weeks 16-22)*
+  - `Weeks 16-19:` Conduct the feasibility study for the true multi-tenant language server. Research state-sharing strategies and concurrency models. Document the architectural challenges and potential designs. (Objective 4)
+  - `Weeks 20-22:` Finalize the implementation, refine documentation, and incorporate feedback. This period serves as a buffer for addressing unforeseen issues and preparing the final thesis document.
