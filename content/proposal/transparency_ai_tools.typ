@@ -46,4 +46,4 @@ In preparing this thesis, I utilized Grammarly for grammar and style correction 
 
 In preparing this thesis, I utilized a suite of AI-powered tools to enhance my research and writing process. For grammar, style correction, and refining the text, I used Grammarly and Manus AI. For research, brainstorming, and drafting initial concepts, I employed Perplexity, ChatGPT, and Gemini 2.5 Pro.
 
-While these tools served as valuable assistants in this process, the core ideas, research direction, and final arguments presented in this work are my own. I have carefully checked all text generated or modified by these tools to ensure its accuracy.
+I have carefully checked all text generated or modified by these tools to ensure its accuracy.

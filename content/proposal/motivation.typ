@@ -1,8 +1,6 @@
 = Motivation
-The described inefficiencies have direct negative consequences. For the *university acting as the platform operator*, high resource consumption translates into increased infrastructure costs. For the *students*, high cluster load can lead to degraded performance, such as longer IDE startup times and noticeable latency.
+The described inefficiencies have direct negative consequences for both the platform operator and its users. For the university, high resource consumption translates into increased infrastructure costs, while for students, high cluster load can lead to degraded performance, such as longer IDE startup times and noticeable latency. Therefore, the motivation for this project is threefold, directly impacting the platform's operators, its users, and the scientific community.
 
-The motivation for this project is threefold, directly impacting the platform's operators, its users, and the scientific community.
+First, from an operational standpoint, the primary driver is *resource optimization and cost reduction*. By consolidating multiple language server instances into a shared JVM model, the platform's overall memory footprint can be substantially reduced. This directly lowers infrastructure costs and allows for supporting more concurrent users on the same hardware @leitner:2012:ApplicationlevelPerformanceMonitoring.
 
-First, from an operational standpoint, the primary driver is *resource optimization and cost reduction*. By consolidating multiple language server instances into a shared JVM model, the platform's overall memory footprint is drastically reduced. This directly lowers infrastructure costs and allows for supporting more concurrent users on the same hardware @leitner:2012:ApplicationlevelPerformanceMonitoring.
-
-Second, for users, the goal is to *enhance the developer experience*. A more efficient server-side architecture leads to faster session startup times and reduced latency, providing a more responsive environment for students.
+Second, a key motivation is the enhancement of the developer experience for users. A more efficient server-side architecture leads to faster session startup times and reduced latency, providing a more responsive environment for students.

@@ -1,11 +1,26 @@
 = Schedule
-The thesis work is planned over 5 months, starting on 30 September 2025, and concluding on 15 February 2026. The project will be structured into two main milestones, following an agile, iterative approach.
+The thesis work is planned over 5 months, starting on 30 September 2025, and concluding on 15 February 2026. The project is structured into two main milestones, following an agile, iterative approach.
 
-- *Milestone 1: Foundation and Service Externalization (Weeks 1-6)*
-  - `Weeks 1-2:` In-depth research on LSP, JDT Language Server internals, and multi-tenant architectures. Set up development environments.
-  - `Weeks 3-6:` Implement the externalization of the JDT Language Server into a standalone service. Establish a 1-to-1 connection between a Theia instance and the external service to create a performance baseline. (Objective 1)
+- *Phase 1: Research and Setup (`Weeks 1-2`)*
+  - Conduct in-depth research on the Language Server Protocol (LSP), JDT Language Server internals, and multi-tenant architectures.
+  - Establish the complete development and testing environments.
 
-- *Milestone 2: Shared JVM Implementation, Evaluation, and Finalization (Weeks 7-22)*
-  - `Weeks 7-12:` Implement the core logic for the shared JVM architecture, including the proxy/dispatcher and session management. Ensure strict user isolation within the service. (Objective 2)
-  - `Weeks 13-17:` Integrate the shared language server with the benchmarking suite. Execute comprehensive performance and resource benchmarks against the baseline to validate KPIs. (Objective 3)
-  - `Weeks 18-22:` Finalize the implementation, refine documentation, and incorporate feedback. This period serves as a buffer for addressing any unforeseen issues and preparing the final thesis document.
+- *Phase 2: Baseline Implementation (`Weeks 3-5`)*
+  - Implement the externalization of the JDT Language Server into a standalone Kubernetes service.
+  - Establish a 1-to-1 connection between a Theia IDE instance and the external service. (Objective 1)
+
+- *Phase 3: Baseline Evaluation (`Week 6`)*
+  - Integrate the baseline architecture with the benchmarking suite.
+  - Execute performance and resource benchmarks to establish a clear performance baseline.
+
+- *Phase 4: Shared JVM Core Implementation (`Weeks 7-11`)*
+  - Develop the core logic for the shared JVM architecture, including the proxy/dispatcher and session management.
+  - Implement strict user isolation mechanisms within the service. (Objective 2)
+
+- *Phase 5: Integration and Benchmarking (`Weeks 12-16`)*
+  - Integrate the complete shared language server with the Theia IDE and the benchmarking suite.
+  - Execute comprehensive performance and resource benchmarks against the baseline to validate KPIs. (Objective 3)
+
+- *Phase 6: Finalization and Documentation (`Weeks 17-22`)*
+  - Finalize the implementation, refine the documentation, and incorporate feedback.
+  - This period serves as a buffer for addressing any unforeseen issues and preparing the final thesis document.
