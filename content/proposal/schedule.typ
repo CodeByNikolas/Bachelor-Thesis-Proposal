@@ -6,6 +6,6 @@ The thesis work is planned over 5 months, starting on 30 September 2025, and con
   - `Weeks 3-6:` Implement the externalization of the JDT Language Server into a standalone service. Establish a 1-to-1 connection between a Theia instance and the external service to create a performance baseline. (Objective 1)
 
 - *Milestone 2: Shared JVM Implementation, Evaluation, and Finalization (Weeks 7-22)*
-  - `Weeks 7-12:` Implement the core logic for the shared JVM architecture, including the proxy/dispatcher and session management. Ensure strict user isolation within the service. (Objective 1 & 2)
+  - `Weeks 7-12:` Implement the core logic for the shared JVM architecture, including the proxy/dispatcher and session management. Ensure strict user isolation within the service. (Objective 2)
   - `Weeks 13-17:` Integrate the shared language server with the benchmarking suite. Execute comprehensive performance and resource benchmarks against the baseline to validate KPIs. (Objective 3)
   - `Weeks 18-22:` Finalize the implementation, refine documentation, and incorporate feedback. This period serves as a buffer for addressing any unforeseen issues and preparing the final thesis document.

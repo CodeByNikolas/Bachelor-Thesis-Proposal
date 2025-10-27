@@ -5,8 +5,6 @@ First, this architecture prevents any form of resource sharing. The Java Virtual
 
 Second, since many students work on identical starter projects, each internal language server independently computes and stores nearly identical data structures like Abstract Syntax Trees (ASTs) and symbol indexes, leading to considerable data redundancy across the cluster @barros:2022:EditingSupportSoftware.
 
-These inefficiencies have direct negative consequences. For the *university acting as the platform operator*, high resource consumption translates into increased infrastructure costs. For the *students*, high cluster load can lead to degraded performance, such as longer IDE startup times and noticeable latency. This thesis proposes transitioning from this suboptimal model to a shared, centralized architecture, as conceptualized in Figure 2, which decouples the IDE and centralizes the language server into a scalable, shared service.
-
 #figure(
   image("images/current_architecture.png", width: 80%),
   caption: [

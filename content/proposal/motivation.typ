@@ -1,4 +1,5 @@
 = Motivation
+The described inefficiencies have direct negative consequences. For the *university acting as the platform operator*, high resource consumption translates into increased infrastructure costs. For the *students*, high cluster load can lead to degraded performance, such as longer IDE startup times and noticeable latency.
 
 The motivation for this project is threefold, directly impacting the platform's operators, its users, and the scientific community.
 
