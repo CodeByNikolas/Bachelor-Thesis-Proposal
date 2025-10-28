@@ -1,5 +1,5 @@
 = Schedule
-The thesis work is planned over 5 months, starting on 30 September 2025, and concluding on 15 February 2026. The project is structured following an agile, iterative approach.
+The thesis work is planned to span five months, starting on 30 September 2025, and concluding on 15 February 2026. The project is structured following an agile, iterative approach.
 
 - *Phase 1: Research and Setup (`Weeks 1-2`)*
   - Conduct in-depth research on the Language Server Protocol (LSP), JDT Language Server internals, and multi-tenant architectures.
